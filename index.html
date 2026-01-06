@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise Medical Hospital</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Optional: Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#059669',   // emerald-600
+            danger: '#dc2626',    // red-600
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+  /* Page starts invisible */
+  body {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  /* Class added when page is ready */
+  body.fade-in {
+    opacity: 1;
+  }
+</style>
+
+</head>
+
+<body class="bg-white text-gray-900 antialiased font-sans">
+  
+  <header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <div  class="flex justify-between items-center h-16">
+
+      <!-- LOGO -->
+      <a href="#home" class="text-2xl font-bold text-green-700"><img style="display: inline-block;" class="h-26 w-16" src="thumbnails/hoslog.jpg"><p style="display: inline-block;">Sunrise Medical</p></a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex space-x-8 items-center text-gray-700 font-medium">
+        <a href="#home" class="hover:text-green-700 transition">Home</a>
+        <a href="#services" class="hover:text-green-700 transition">Departments</a>
+        <a href="#doctors" class="hover:text-green-700 transition">Doctors</a>
+        <a href="#appointment" class="hover:text-green-700 transition">Appointments</a>
+        <a href="#about" class="hover:text-green-700 transition">About</a>
+        <a href="#blog" class="hover:text-green-700 transition">Health Tips</a>
+        <a href="#contact" class="hover:text-green-700 transition">Contact</a>
+        <a href="tel:+255788296274" class="ml-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+          Emergency
+        </a>
+      </nav>
+
+      <!-- MOBILE MENU BUTTON -->
+      <div class="md:hidden flex items-center">
+        <button id="mobileMenuBtn" class="text-gray-700 focus:outline-none">
+          <!-- Hamburger icon -->
+          <svg id="hamburgerIcon" class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <!-- Close icon (hidden by default) -->
+          <svg id="closeIcon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-300 bg-white shadow-md">
+    <nav class="flex flex-col px-6 py-4 space-y-4 text-gray-700 font-medium">
+      <a href="#home" class="hover:text-green-700 transition">Home</a>
+      <a href="#services" class="hover:text-green-700 transition">Departments</a>
+      <a href="#doctors" class="hover:text-green-700 transition">Doctors</a>
+      <a href="#appointment" class="hover:text-green-700 transition">Appointments</a>
+      <a href="#about" class="hover:text-green-700 transition">About</a>
+      <a href="#blog" class="hover:text-green-700 transition">Health Tips</a>
+      <a href="#contact" class="hover:text-green-700 transition">Contact</a>
+      <a href="tel:+255788296274" class="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+        Emergency
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- HERO / ABOVE THE FOLD -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+        <!-- LEFT CONTENT -->
+        <div>
+          <span class="inline-block mb-4 text-sm font-semibold tracking-wide text-primary">
+            Trusted Healthcare Center
+          </span>
+
+          <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight">
+            Sunrise Medical Hospital
+          </h1>
+
+          <p class="mt-6 text-lg text-gray-600 max-w-xl">
+            Quality care. When you need it most.
+          </p>
+
+          <!-- CTA BUTTONS -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#appointment"
+               class="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-white font-semibold hover:bg-emerald-700 transition">
+              Book Appointment
+            </a>
+
+            <a href="tel:+255788296274"
+               class="inline-flex items-center justify-center rounded-xl border border-danger px-8 py-4 text-danger font-semibold hover:bg-red-50 transition">
+              Emergency Call
+            </a>
+          </div>
+
+          <!-- TRUST SIGNALS -->
+          <div class="mt-10 grid grid-cols-3 max-w-md gap-6 text-sm text-gray-500">
+            <div>
+              <span class="block text-2xl font-bold text-gray-900">15+</span>
+              Years of Service
+            </div>
+            <div>
+              <span class="block text-2xl font-bold text-gray-900">24/7</span>
+              Emergency Care
+            </div>
+            <div>
+              <span class="block text-2xl font-bold text-gray-900">ISO</span>
+              Certified Facility
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT VISUAL -->
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/10 rounded-3xl -rotate-3"></div>
+          <img
+            src="thumbnails/facilities.jpg"
+            alt="Hospital Facility"
+            class="relative rounded-3xl shadow-xl object-cover w-full h-[420px]"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / DEPARTMENTS -->
+<section id="services" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        Our Medical Services
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Find the right department and get the care you need without delay.
+      </p>
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- SERVICE CARD -->
+      <a href="outpatient.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+          Outpatient Care
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          Consultations, follow-ups, and same-day treatments.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-primary">
+          Learn more →
+        </span>
+      </a>
+
+      <a href="emergency.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-red-500 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-red-600">
+          Emergency
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          24/7 emergency services with rapid response care.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-red-600">
+          Learn more →
+        </span>
+      </a>
+
+      <a href="maternity.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+          Maternity
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          Antenatal, delivery, and postnatal care.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-primary">
+          Learn more →
+        </span>
+      </a>
+
+      <a href="pediatrics.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+          Pediatrics
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          Comprehensive healthcare for infants and children.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-primary">
+          Learn more →
+        </span>
+      </a>
+
+      <a href="surgery.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+          Surgery
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          Safe, modern surgical procedures and recovery care.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-primary">
+          Learn more →
+        </span>
+      </a>
+
+      <a href="diagnostics.html"
+         class="group rounded-2xl bg-white p-8 border border-gray-200 hover:border-primary hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+          Diagnostics & Lab
+        </h3>
+        <p class="mt-3 text-gray-600 text-sm">
+          Accurate lab tests and imaging services.
+        </p>
+        <span class="mt-6 inline-block text-sm font-semibold text-primary">
+          Learn more →
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS & SPECIALISTS -->
+<section id="doctors" class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-14">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        Meet Our Doctors
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Experienced specialists dedicated to your care.
+      </p>
+    </div>
+
+    <!-- DOCTORS GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- DOCTOR CARD -->
+<div class="rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+  <img
+    src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+    alt="Dr. Sarah Johnson"
+    class="w-full h-72 object-cover rounded-xl"
+  />
+
+  <div class="mt-6">
+    <h3 class="text-xl font-semibold text-gray-900">
+      Dr. Sarah Johnson
+    </h3>
+    <p class="text-primary font-medium mt-1">
+      Consultant Pediatrician
+    </p>
+
+    <p class="mt-3 text-sm text-gray-600">
+      12+ years experience · MD Pediatrics · Child Health Specialist
+    </p>
+
+    <button
+      onclick="bookDoctor('Dr. Sarah Johnson', 'Pediatrics')"
+      class="mt-6 inline-flex items-center justify-center w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-emerald-700 transition"
+    >
+      Book with Dr. Sarah
+    </button>
+  </div>
+</div>
+
+
+      <!-- DOCTOR CARD -->
+      <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+          alt="Dr. Michael Okello"
+          class="w-full h-72 object-cover rounded-xl"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold text-gray-900">
+            Dr. Michael Okello
+          </h3>
+          <p class="text-primary font-medium mt-1">
+            General Surgeon
+          </p>
+
+          <p class="mt-3 text-sm text-gray-600">
+            15+ years experience · MBChB · Advanced Surgical Care
+          </p>
+
+          <button
+      onclick="bookDoctor('Dr. Michael Okello', 'General Surgery')"
+      class="mt-6 inline-flex items-center justify-center w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-emerald-700 transition"
+    >
+      Book with Dr. Michael
+    </button>
+        </div>
+      </div>
+
+      <!-- DOCTOR CARD -->
+      <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <img
+          src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
+          alt="Dr. Amina Hassan"
+          class="w-full h-72 object-cover rounded-xl"
+        />
+
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold text-gray-900">
+            Dr. Athman Abdallah
+          </h3>
+          <p class="text-primary font-medium mt-1">
+            Obstetrician & Gynecologist
+          </p>
+
+          <p class="mt-3 text-sm text-gray-600">
+            10+ years experience · Women’s Health · Maternity Care
+          </p>
+
+          <button
+      onclick="bookDoctor('Dr. Athman Abdallah', 'Obstetrics & Gynecology')"
+      class="mt-6 inline-flex items-center justify-center w-full rounded-xl bg-primary px-6 py-3 text-white font-semibold hover:bg-emerald-700 transition"
+    >
+      Book with Dr. Athman
+    </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT BOOKING -->
+<section  id="appointment" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        Book an Appointment
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Schedule your visit quickly. No long forms.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- BOOKING FORM -->
+      <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+        <form id="appointmentForm" class="space-y-6">
+
+          <!-- NAME -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Michael William"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
+          <!-- PHONE -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="+255 7XX XXX XXX"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
+          <!-- DEPARTMENT -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Department
+            </label>
+            <select
+            name="department"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            >
+              <option value="">Select department</option>
+              <option>Outpatient</option>
+              <option>Emergency</option>
+              <option>Maternity</option>
+              <option>Pediatrics</option>
+              <option>Surgery</option>
+              <option>Diagnostics / Lab</option>
+            </select>
+          </div>
+
+          <!-- DATE -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Preferred Date
+            </label>
+            <input
+              type="date"
+              name="date"
+              class="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
+          <!-- SUBMIT -->
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-primary py-4 text-white font-semibold hover:bg-emerald-700 transition">
+            Book Appointment
+          </button>
+
+        </form>
+      </div>
+
+      <!-- QUICK CONTACT OPTIONS -->
+      <div class="space-y-6">
+
+        <!-- WHATSAPP -->
+        <a
+          href="https://wa.me/255788296274"
+          target="_blank"
+          class="flex items-center justify-between rounded-2xl bg-green-500 p-6 text-white hover:bg-green-600 transition">
+          <div>
+            <h3 class="text-xl font-semibold">Book via WhatsApp</h3>
+            <p class="text-sm opacity-90">
+              Fastest response during working hours
+            </p>
+          </div>
+          <span class="text-2xl font-bold">→</span>
+        </a>
+
+        <!-- CALL -->
+        <a
+          href="tel:+255788296274"
+          class="flex items-center justify-between rounded-2xl bg-red-600 p-6 text-white hover:bg-red-700 transition">
+          <div>
+            <h3 class="text-xl font-semibold">Call for Appointment</h3>
+            <p class="text-sm opacity-90">
+              Available 24/7 for emergencies
+            </p>
+          </div>
+          <span class="text-2xl font-bold">→</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE HOSPITAL -->
+<section id="about" class="bg-white py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- TEXT CONTENT -->
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+          About <span class="text-green-700">Sunrise Medical</span> Hospital
+        </h2>
+
+        <!-- BRIEF HISTORY -->
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          Sunrise Medical Hospital has been providing reliable, patient-centered
+          healthcare for over 15 years. We serve our community with modern
+          facilities, skilled professionals, and a commitment to excellence.
+        </p>
+
+        <!-- MISSION & VALUES -->
+        <div class="mt-8">
+          <h3 class="text-xl font-semibold text-gray-900">
+            Our Mission & Values
+          </h3>
+          <p class="mt-3 text-gray-600">
+            To deliver compassionate, accessible, and high-quality healthcare
+            while upholding integrity, respect, and continuous improvement.
+          </p>
+        </div>
+
+        <!-- WHY CHOOSE US -->
+        <div class="mt-8">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Why Choose Us
+          </h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Experienced and certified medical specialists
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              24/7 emergency and critical care services
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Modern diagnostic and treatment facilities
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Patient-focused care with transparent pricing
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FACILITY IMAGES -->
+      <div class="grid grid-cols-2 gap-4">
+        <img
+          src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+          alt="Hospital reception"
+          class="rounded-2xl object-cover h-56 w-full"
+        />
+        <img
+          src="thumbnails/corridor.webp"
+          alt="Hospital corridor"
+          class="rounded-2xl object-cover h-56 w-full"
+        />
+        <img
+          src="thumbnails/patroom.jpg"
+          alt="Patient room"
+          class="rounded-2xl object-cover h-56 w-full col-span-2"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY & CONTACT -->
+<section class="bg-gray-900 text-white py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+      <!-- CONTACT DETAILS -->
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold">
+          Emergency & Contact Information
+        </h2>
+
+        <!-- EMERGENCY -->
+        <div class="mt-8">
+          <p class="text-sm uppercase tracking-wide text-gray-400">
+            Emergency Hotline
+          </p>
+          <a href="tel:+255788296274"
+             class="block mt-2 text-2xl font-bold text-red-500">
+            +255 788 296 274
+          </a>
+          <p class="mt-2 text-gray-400 text-sm">
+            Available 24 hours a day, 7 days a week
+          </p>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="mt-8">
+          <p class="text-sm uppercase tracking-wide text-gray-400">
+            Location
+          </p>
+          <p class="mt-2 text-gray-200">
+            Plot 45, Main Road<br>
+            Dar es Salaam, Tanzania
+          </p>
+        </div>
+
+        <!-- HOURS -->
+        <div class="mt-8">
+          <p class="text-sm uppercase tracking-wide text-gray-400">
+            Working Hours
+          </p>
+          <p class="mt-2 text-gray-200">
+            Monday – Sunday: 8:00 AM – 8:00 PM<br>
+            Emergency Services: 24/7
+          </p>
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="mt-8">
+          <a href="https://wa.me/255788296274"
+             target="_blank"
+             class="inline-flex items-center gap-3 rounded-xl bg-green-500 px-6 py-4 font-semibold hover:bg-green-600 transition">
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <!-- GOOGLE MAP -->
+      <div class="w-full h-[420px] rounded-2xl overflow-hidden border border-white/10">
+        <iframe
+          src="https://www.google.com/maps?q=Dar+es+Salaam&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE & PAYMENT INFO -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        Insurance & Payment Options
+      </h2>
+      <p class="mt-4 text-gray-600">
+        We accept a variety of insurance providers and payment methods to make your experience seamless.
+      </p>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- INSURANCE PROVIDERS -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Accepted Insurance</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Jubilee Insurance</li>
+          <li>• AAR Healthcare</li>
+          <li>• Allianz</li>
+          <li>• Blue Cross</li>
+          <li>• National Health Insurance</li>
+        </ul>
+      </div>
+
+      <!-- PAYMENT METHODS -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Payment Methods</h3>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Cash</li>
+          <li>• Mobile Money (Mpesa, Tigo Pesa, Airtel Money)</li>
+          <li>• Debit / Credit Cards</li>
+        </ul>
+      </div>
+
+      <!-- CORPORATE PARTNERSHIPS -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Corporate Partnerships</h3>
+        <p class="text-gray-600">
+          We partner with local and international companies to provide healthcare packages and employee wellness programs.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS / PATIENT REVIEWS -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mx-auto mb-12 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        What Our Patients Say
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Real experiences from people who trusted us with their care.
+      </p>
+    </div>
+
+    <!-- TESTIMONIALS GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- TESTIMONIAL CARD -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/65.jpg"
+            alt="Patient Jane Doe"
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Jane D.</h3>
+            <div class="flex mt-1 text-yellow-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-600 text-sm">
+          “The doctors and staff were incredibly caring. I felt safe and informed throughout my treatment.”
+        </p>
+      </div>
+
+      <!-- TESTIMONIAL CARD -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/men/45.jpg"
+            alt="Patient Michael K."
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Michael K.</h3>
+            <div class="flex mt-1 text-yellow-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-600 text-sm">
+          “I was impressed by the professionalism and efficiency. Highly recommend Sunrise Medical Hospital.”
+        </p>
+      </div>
+
+      <!-- TESTIMONIAL CARD -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-4">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Patient Amina S."
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">Amina S.</h3>
+            <div class="flex mt-1 text-yellow-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-600 text-sm">
+          “The maternity care was top-notch. I felt supported every step of the way.”
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HEALTH ARTICLES / BLOG -->
+<section id="blog" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mx-auto mb-12 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+        Health Tips & Articles
+      </h2>
+      <p class="mt-4 text-gray-600">
+        Stay informed with expert advice on common conditions, preventive care, and healthy living.
+      </p>
+    </div>
+
+    <!-- ARTICLES GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- ARTICLE CARD -->
+      <a href="healthyhearttips.html" class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+        <img
+          src="thumbnails/heart tips.webp"
+          alt="Heart Health Tips"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+            5 Tips for a Healthy Heart
+          </h3>
+          <p class="mt-3 text-gray-600 text-sm">
+            Learn easy lifestyle changes to reduce heart disease risk and improve overall wellness.
+          </p>
+          <span class="mt-4 inline-block text-sm font-semibold text-primary">
+            Read More →
+          </span>
+        </div>
+      </a>
+
+      <!-- ARTICLE CARD -->
+      <a href="commoncoldprevention.html" class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+        <img
+          src="thumbnails/cold.png"
+          alt="Cold Prevention"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+            Preventing the Common Cold
+          </h3>
+          <p class="mt-3 text-gray-600 text-sm">
+            Practical steps to avoid seasonal illnesses and stay healthy throughout the year.
+          </p>
+          <span class="mt-4 inline-block text-sm font-semibold text-primary">
+            Read More →
+          </span>
+        </div>
+      </a>
+
+      <!-- ARTICLE CARD -->
+      <a href="preventivehealthcheckup.html" class="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition">
+        <img
+          src="thumbnails/preventive checkup.webp"
+          alt="Preventive Checkup"
+          class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary">
+            Importance of Preventive Checkups
+          </h3>
+          <p class="mt-3 text-gray-600 text-sm">
+            Early detection saves lives. Find out which tests are recommended at different ages.
+          </p>
+          <span class="mt-4 inline-block text-sm font-semibold text-primary">
+            Read More →
+          </span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- CTA BUTTON -->
+    <div class="mt-12 text-center">
+      <a href="articles.html" class="inline-block bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-emerald-700 transition">
+        View All Articles
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-gray-300 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <!-- QUICK LINKS -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#appointment" class="hover:text-primary transition">Book Appointment</a></li>
+          <li><a href="#services" class="hover:text-primary transition">Departments</a></li>
+          <li><a href="#doctors" class="hover:text-primary transition">Doctors</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- DEPARTMENTS -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Departments</h3>
+        <ul class="space-y-2">
+          <li><a href="outpatient.html" class="hover:text-primary transition">Outpatient</a></li>
+          <li><a href="emergency.html" class="hover:text-primary transition">Emergency</a></li>
+          <li><a href="maternity.html" class="hover:text-primary transition">Maternity</a></li>
+          <li><a href="pediatrics.html" class="hover:text-primary transition">Pediatrics</a></li>
+          <li><a href="surgery.html" class="hover:text-primary transition">Surgery</a></li>
+          <li><a href="diagnostics.html" class="hover:text-primary transition">Diagnostics & Lab</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="privacy.html" class="hover:text-primary transition">Privacy Policy</a></li>
+          <li><a href="terms.html" class="hover:text-primary transition">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL LINKS -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+        <div class="flex gap-4 mt-2">
+          <a href="https://facebook.com" target="_blank" class="hover:text-primary transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12a10 10 0 1 0-11.5 9.95v-7.05h-2.5v-2.9h2.5V9.41c0-2.47 1.46-3.84 3.7-3.84 1.07 0 2.19.19 2.19.19v2.4h-1.23c-1.22 0-1.6.76-1.6 1.54v1.85h2.72l-.44 2.9h-2.28V22A10 10 0 0 0 22 12z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="hover:text-primary transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-primary transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.054 1.962.24 2.42.403a4.92 4.92 0 0 1 1.75 1.02 4.92 4.92 0 0 1 1.02 1.75c.163.458.35 1.25.403 2.42.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.962-.403 2.42a4.92 4.92 0 0 1-1.02 1.75 4.92 4.92 0 0 1-1.75 1.02c-.458.163-1.25.35-2.42.403-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.962-.24-2.42-.403a4.92 4.92 0 0 1-1.75-1.02 4.92 4.92 0 0 1-1.02-1.75c-.163-.458-.35-1.25-.403-2.42C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.054-1.17.24-1.962.403-2.42a4.92 4.92 0 0 1 1.02-1.75 4.92 4.92 0 0 1 1.75-1.02c.458-.163 1.25-.35 2.42-.403C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07 5.775.127 4.78.31 4.012.566a7.12 7.12 0 0 0-2.53 1.47 7.12 7.12 0 0 0-1.47 2.53c-.256.768-.44 1.763-.497 3.04C0 8.332 0 8.736 0 12s.012 3.668.07 4.948c.057 1.277.24 2.272.497 3.04a7.12 7.12 0 0 0 1.47 2.53 7.12 7.12 0 0 0 2.53 1.47c.768.256 1.763.44 3.04.497C8.332 24 8.736 24 12 24s3.668-.012 4.948-.07c1.277-.057 2.272-.24 3.04-.497a7.12 7.12 0 0 0 2.53-1.47 7.12 7.12 0 0 0 1.47-2.53c.256-.768.44-1.763.497-3.04C24 15.668 24 15.264 24 12s-.012-3.668-.07-4.948c-.057-1.277-.24-2.272-.497-3.04a7.12 7.12 0 0 0-1.47-2.53 7.12 7.12 0 0 0-2.53-1.47c-.768-.256-1.763-.44-3.04-.497C15.668 0 15.264 0 12 0z"/>
+              <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.998 3.998 0 1 1 0-7.996 3.998 3.998 0 0 1 0 7.996z"/>
+              <circle cx="18.406" cy="5.594" r="1.44"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+      &copy; 2026 Sunrise Medical Hospital. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburgerIcon');
+  const closeIcon = document.getElementById('closeIcon');
+
+  btn.addEventListener('click', () => {
+    if (menu.style.maxHeight && menu.style.maxHeight !== "0px") {
+      // Close menu
+      menu.style.maxHeight = "0px";
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    } else {
+      // Open menu
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      hamburger.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+    }
+  });
+
+  // Optional: close menu on link click
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.style.maxHeight = "0px";
+      hamburger.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+});
+
+document.getElementById("appointmentForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  const name = form.name.value.trim();
+  const phone = form.phone.value.trim();
+  const department = form.department.value;
+  const date = form.date.value;
+
+  const message = `
+Hello, I would like to book an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Department: ${department}
+Preferred date: ${date}
+
+Thank you.
+  `.trim();
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappNumber = "255788296274"; // hospital WhatsApp number
+
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+});
+
+function bookDoctor(doctorName, department) {
+  const message = `
+Hello, I would like to book an appointment.
+
+Doctor: ${doctorName}
+Department: ${department}
+
+My name:
+My phone number:
+Preferred date:
+  `.trim();
+
+  const whatsappNumber = "255788296274";
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
